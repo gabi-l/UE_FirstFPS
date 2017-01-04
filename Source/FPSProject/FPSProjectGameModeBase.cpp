@@ -2,6 +2,13 @@
 
 #include "FPSProject.h"
 #include "FPSProjectGameModeBase.h"
+#include "FPSCharacter.h"
+
+AFPSProjectGameModeBase::AFPSProjectGameModeBase(const class FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer)
+{
+	DefaultPawnClass = AFPSCharacter::StaticClass();
+}
 
 
 void AFPSProjectGameModeBase::StartPlay()
@@ -12,7 +19,8 @@ void AFPSProjectGameModeBase::StartPlay()
 	{
 		// Display a debug message for five seconds. 
 		// The -1 "Key" value (first argument) indicates that we will never need to update or refresh this message.
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Hello World, this is FPSGameMode!"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Gabil rules this world!"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Gabil is the best!"));
 	}
 }
 

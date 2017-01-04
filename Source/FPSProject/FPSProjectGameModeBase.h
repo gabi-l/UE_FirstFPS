@@ -13,5 +13,7 @@ class FPSPROJECT_API AFPSProjectGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 
-		virtual void StartPlay() override;
+	AFPSProjectGameModeBase(const FObjectInitializer& ObjectInitializer);
+
+	virtual void StartPlay() override;
 };
