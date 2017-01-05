@@ -3,11 +3,13 @@
 #include "FPSProject.h"
 #include "FPSProjectGameModeBase.h"
 #include "FPSCharacter.h"
+#include "FPSHUD.h"
 
 AFPSProjectGameModeBase::AFPSProjectGameModeBase(const class FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	DefaultPawnClass = AFPSCharacter::StaticClass();
+	HUDClass = AFPSHUD::StaticClass();
 }
 
 
